@@ -1,4 +1,4 @@
-<h2>CPU can do it. But should it?</h2>
+# CPU can do it. But should it?
 
 Given a task that must be repeated a lot, more or less uniformly, a specialised hardware can be designed that bypasses(not completely) the CPU. This saves CPU cycles.
 
