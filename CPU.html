@@ -1,4 +1,4 @@
-# CPU can do it. But should it?
+<h2>CPU can do it. But should it?</h2>
 
 Given a task that must be repeated a lot, more or less uniformly, a specialised hardware can be designed that bypasses(not completely) the CPU. This saves CPU cycles.
 
@@ -6,24 +6,22 @@ For example, say we have a repetitive task:
   Check network packet for errors using checksums and error-detection codes.
   If an error is detected, request that packet to be resent.
 
-Technically, this tasks can be done by a CPU. But what if we create a dedicated hardware for this uniformly repetitive task?
-And that's where NIC enters the scene. NIC can do this task(and many more tasks listed at\[[1]\]) independent of the CPU.
+Technically, this can be done by a CPU. But what if we create a dedicated hardware for this uniformly repetitive task?
+And that's where NIC enters the scene. NIC can do this task(and many more tasks listed at[1]) independent of the CPU.
 
-Whatever NIC does can be done by the CPU as well. In fact you can simulate/emulate NIC on a CPU. Not just NIC, many other tasks for which dedicated hardwares exist can be done by the CPU.
-But why waste CPU cycles on frequent repetitive tasks? In our case here, using NIC will save CPU cycles.
-Secondly, a dedicated hardware unit(here, NIC) will be more efficient than a generalised-hardware i.e. CPU.
+Whatever NIC does can be done by the CPU as well. In fact you can simulate/emulate NIC on a CPU. Not just NIC, many other tasks for which dedicated hardwares exist can be done by the CPU. But why waste CPU cycles on frequent repetitive tasks? In our case here, using NIC will save CPU cycles. Secondly, a dedicated hardware unit(here, NIC) will be more efficient than a generalised-hardware i.e. CPU.
 
 
 Let's take another example. Say, we have a repetitive task:
   When a key is pressed from the keyboard, receive it, and store it in memory.
 
 A CPU can do this. But since keypresses happen too frequently and the task of receiving and storing is uniformly repetitive, it'd be better to design a dedicated hardware unit to handle it.
+
 A dedicated hardware unit that handles this is called Direct Memory Access(DMA). DMA takes this responsibility so our CPU can be free for other tasks.
 And the use of DMA doesn't need to be limited to keypresses from a keyboard. It can also be used to store data received from a microphone, or a camera.
-You can read more about what other uniformly repetitive tasks DMA does here\[[2]\]
+You can read more about what other uniformly repetitive tasks DMA does here[2]
 
-A cutting edge example before we end this article. One can classify scheduling processes as a repetitve task. And therefore, there have been some attempts to do this using
-dedicated hardware units. While scheduling can be called a repetitive task, it's less uniform than the two examples above. The scheduling algorithms are more dynamic and nuanced than the tasks lists above.
+A cutting edge example before we end this article. One can classify scheduling processes as a repetitve task. And therefore, there have been some attempts to do this using dedicated hardware units. While scheduling can be called a repetitive task, it's less uniform than the two examples above. The scheduling algorithms are more dynamic and nuanced than the tasks lists above.
 
 Hence, there are challenges in creating a hardware dedicated to scheduling.
 
@@ -50,10 +48,6 @@ RTU (Real-Time Unit) – a well-known academic hardware scheduler design that of
 
 
 Bibliography:
-
-\[1\]: https://www.fs.com/blog/what-is-a-network-interface-card-nic-definition-function-types-525.html
-
-\[2\]: https://www.spiceworks.com/it-hardware/direct-memory-access/
 
 [1]: https://www.fs.com/blog/what-is-a-network-interface-card-nic-definition-function-types-525.html
 [2]: https://www.spiceworks.com/it-hardware/direct-memory-access/
