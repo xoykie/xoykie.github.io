@@ -1,6 +1,6 @@
 # CPU can do it. But should it?
 
-Given a task that must be repeated a lot, more or less uniformly, a specialised hardware can be designed to do that task without the need of CPU. This saves CPU cycles, which can be used elsewhere.
+Given a task that must be repeated a lot, more or less uniformly, a specialised hardware can be designed that bypasses(not completely) the CPU. This saves CPU cycles.
 
 For example, say we have a repetitive task:
   Check network packet for errors using checksums and error-detection codes.
